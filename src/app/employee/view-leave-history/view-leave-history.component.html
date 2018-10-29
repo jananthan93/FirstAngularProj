@@ -1,0 +1,97 @@
+<div class="panel panel-default">
+  <div class="panel-heading main-color-bg">
+    <h3 class="panel-title">Leave Request History</h3>
+  </div>
+    <div class="panel-body">
+        <div class="row">
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Leave Type</th>
+                    <th>Starting date</th>
+                    <th>Ending date</th>
+                    <th>Number of days</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    
+                    <td>Casual</td>
+                    <td>01/10/2018</td>
+                <td>02/10/2018</td>
+                <td>10 days</td>
+                <td>Wedding</td>
+                <td>Approved</td>
+                <td><button type="button" class="btn btn-info btn-danger" data-toggle="modal" data-target="#myModal4">cancel</button>
+                  
+        
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal4" role="dialog">
+                                      <div class="modal-dialog">
+                                      
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Do You want to Delete ?</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                              <div class="form-group">
+                                                  <label class="control-label col-sm-12" for="email">Reason:</label>
+                                                  <div class="col-sm-12">
+                                                    <input type="email" class="form-control" id="reason" placeholder="Reason for cancel">
+                                                  </div>
+                                                </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                                          </div>
+                                        </div>
+                                        
+                                      </div>
+                                    </div>
+                </td>
+                  </tr>
+                <tr>
+                    
+                    <td>Casual</td>
+                    <td>01/10/2018</td>
+                <td>02/10/2018</td>
+                <td>10 days</td>
+                <td>Weeding</td>
+                <td>pending</td>
+                <td>
+                  
+        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-info btn-danger" data-toggle="modal" data-target="#myModal3">cancel</button>
+        <!-- <button type="button" class="btn btn-danger" data-toggle="modal" data-dismiss="#myModal3">cancel</button> -->
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="myModal3" role="dialog">
+                            <div class="modal-dialog">
+                            
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  <h4 class="modal-title">Do You want to Delete ?</h4>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </div></td>
+                                </tr>
+                
+                </tbody>
+              </table>
+          </div>
+    </div>
+</div>

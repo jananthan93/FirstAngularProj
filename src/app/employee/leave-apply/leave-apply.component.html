@@ -1,0 +1,86 @@
+<div class="panel panel-default">
+  <div class="panel-heading main-color-bg">
+    <h3 class="panel-title">Apply Leave Request</h3>
+  </div>
+  <div class="panel-body">
+    <form >
+     
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label col-sm-12" for="email">Leave Type:</label>
+            <div class="col-sm-12">
+              <input type="email" class="form-control" id="LeaveType" placeholder="Leave Type" name="leavetype" >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label col-sm-12" for="email">Remaining Days:</label>
+            <div class="col-sm-12">
+              <input type="email" class="form-control" id="Remaining Days" placeholder="Remaining Days" name="remainday"> 
+               
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label col-sm-6" for="email">Start Date:</label>
+            <div class="col-sm-12">
+              <input type="date" class="form-control" id="email" placeholder="Enter email" name="startDate">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label col-sm-6" for="email">End Date:</label>
+            <div class="col-sm-12">
+              <input type="date" class="form-control" id="email" placeholder="Enter email" name="endDate" >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <label class="control-label col-sm-12" for="email">Reason:</label>
+          <div class="col-sm-12">
+            <textarea class="form-control" id="email" placeholder="Enter Reason" name="reason" >
+                                </textarea>
+          </div>
+        </div>
+
+
+
+      </div>
+    </form>
+    <br><br>
+    <div style="text-align:right">
+      <button type="button" class="btn btn-success top-margin" data-toggle="modal" data-target="#myModal">Apply</button>
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Leave Request</h4>
+          </div>
+          <div class="modal-body">
+            <p>Sucessfully apllied!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

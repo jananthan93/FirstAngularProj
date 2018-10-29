@@ -1,0 +1,108 @@
+<div class="panel panel-default">
+  <button type="button" class="btn btn-info btn-default pull-right" data-toggle="modal" data-target="#myModal4" (click)="clear()">Add
+    Department</button>
+  <div class="panel-heading main-color-bg">
+    <h3 class="panel-title">Department Details</h3>
+  </div>
+
+  <!-- Modal for add Department-->
+  <div class="modal fade" id="myModal4" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Department</h4>
+        </div>
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label>Department Name :</label>
+            <input type="text" class="form-control" name="depName" placeholder="Department Name" [(ngModel)]="depObj.departmentName">
+          </div>
+          <!-- <div class="form-group">
+            <label>Department Id:</label>
+            <input type="text" class="form-control" name="depId" placeholder="Department Id">
+          </div> -->
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" (click)="createDepartment()">Add</button>
+          <!-- <button type="button" class="btn btn-active" data-dismiss="modal">Update</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <app-view-department></app-view-department> -->
+  <div class="panel-body">
+    <div class="row">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Department Id</th>
+            <th>Department Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dept of departments">
+            <td>{{dept.id}}</td>
+            <td>{{dept.departmentName}}</td>
+            
+            <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal2"(click)="depUpdateId(dept)">Edit</button>
+            <button type="button" class="btn btn-danger " data-toggle="modal" data-target="#myModal1">Delete</button>
+          </tr>
+            <!-- Modal for edit department-->
+             <div class="modal fade" id="myModal2" role="dialog">
+              <div class="modal-dialog">
+                       <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Update Department</h4>
+                  </div>
+                 <div class="modal-body">
+                    <div class="form-group">
+                        <label>Department Id :</label>
+                        <input type="text" class="form-control" name="depName" placeholder=""  [(ngModel)]="depObj.id"  readonly>
+                      </div>
+                    <div class="form-group">
+                        <label>Department Name :</label>
+                        <input type="text" class="form-control" name="depName" placeholder="Department Name" [(ngModel)]="depObj.departmentName">
+                      </div>
+
+                 </div>
+                  
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" (click)=" updateDepartment()">Update</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal for Delete department-->
+            <div class="modal fade" id="myModal1" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Are You Delete Department?</h4>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" (click)="deptDeleteId(dept)">Yes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" >No</button>
+                    <!-- <button type="button" class="btn btn-active" data-dismiss="modal">Update</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

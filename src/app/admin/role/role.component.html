@@ -1,0 +1,115 @@
+<div class="panel panel-default">
+  <button type="button" class="btn btn-info btn-default pull-right" data-toggle="modal" data-target="#modal" (click)="clear()">Add
+    Role</button>
+    <div class="panel-heading main-color-bg">
+      <h3 class="panel-title">Role Details</h3>
+    </div>
+
+        <!--Add Role Modal -->
+        <div class="modal fade" id="modal" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Role</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label>Role Name :</label>
+                  <input type="text" class="form-control" name="rname" placeholder="Role Name " [(ngModel)]="roleObj.roleName">
+                </div>
+                <!-- <div class="form-group">
+                                        <label>Role Id:</label>
+                                        <input type="text" class="form-control" name="rid" placeholder="Role Id">
+                                    </div> -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" (click)="createRole()">Add</button>
+                <!-- <button type="button" class="btn btn-active" data-dismiss="modal">Update</button> -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- close modal role -->
+      <div class="panel-body">
+        <div class="row">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Role Id</th>
+                <th>Role Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let role of roles">
+                <td>{{role.id}}</td>
+                <td>{{role.roleName}}</td>
+
+                <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#Modal2" (click)="roleUpdateId(role)">Edit</button>
+                <button type="button" class="btn btn-danger " data-toggle="modal" data-target="#Modal1" (click)="roleDeleteId(role)">Delete</button>
+              </tr>
+                   <!-- Modal for edit department-->
+                  <div class="modal fade" id="Modal2" role="dialog">
+                    <div class="modal-dialog">
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Update Role</h4>
+                        </div>
+                        <div class="modal-body">
+                          <div class="form-group">
+                            <label>Role Id :</label>
+                            <input type="text" class="form-control" name="id" placeholder="" [(ngModel)]="roleObj.id"
+                              readonly>
+                          </div>
+                          <div class="form-group">
+                            <label>Role Name :</label>
+                            <input type="text" class="form-control" name="rname" placeholder="Role Name" [(ngModel)]="roleObj.roleName">
+                          </div>
+
+                        </div>
+
+
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" (click)="  updateRole()">Update</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Modal for Delete department-->
+                  <div class="modal fade" id="Modal1" role="dialog">
+                    <div class="modal-dialog">
+
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Are You Delete Role?</h4>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" (click)="deleteRole() ">Yes</button>
+                          <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                          <!-- <button type="button" class="btn btn-active" data-dismiss="modal">Update</button> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+            </tbody>
+          </table>
+        </div>
+      </div>
+ 
+</div>
+ 
+
+
+
+
+
+
+

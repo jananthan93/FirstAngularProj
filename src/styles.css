@@ -1,0 +1,164 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  background: #f4f4f4;
+
+}
+/*navbar*/
+.navbar{
+  min-height: 33px !important;
+  margin-bottom:0;
+  border-radius:0;
+}
+.navbar-nav > li > a, .navbar-brand{
+      padding-top:6px !important;
+      padding-bottom:0 !important;
+      height: 33px;
+
+}
+.navbar-default {
+  background-color: #595cb6;
+  border-color: #5451e4;
+}
+.navbar-default .navbar-brand {
+  color: #8fd7e9;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #dfd337;
+}
+.navbar-default .navbar-text {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #dfd337;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #595cb6;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #dfd337;
+  background-color: #1613e7;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
+  background-color: #1613e7;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #dfd337;
+  background-color: #1613e7;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #dfd337;
+  background-color: #1613e7;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #dfd337;
+  background-color: #1613e7;
+}
+.navbar-default .navbar-toggle {
+  border-color: #1613e7;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #1613e7;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+  color: #dfd337;
+}
+
+ /*custom*/
+ .main-color-bg{
+  background-color: #454bec !important;
+  border-color: #5d5cbd;
+  color: #ffffff !important;
+}
+
+/* btn */
+.btn{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.pull-right {
+  float: right!important;
+  background-color: blueviolet;
+}
+/*header*/
+#header{
+background: #333333;
+color:#ffffff;
+padding-bottom: 10px;
+margin-bottom: 15px;
+}
+#header .create{
+  padding-top: 20px;
+}
+
+/*breadcrumb*/
+.breadcrumb{
+background: #cccccc;
+color:#333333;
+}
+.breadcrumb a{
+color:#333333;
+}
+
+/*Progress Bar*/
+.progress-bar{
+ background: #333333;
+ color:#ffffff;
+}
+.panel-body {
+padding: 15px;
+background-color: #d0e2ef;
+}
+/* .well{
+background-color: #9598eb
+} */
+body {
+background: #9ebbf3;
+}
+
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #dfd337;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #dfd337;
+    background-color: #1613e7;
+  }
+ }
+ .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+  border: 1px solid #cec0c0;
+}

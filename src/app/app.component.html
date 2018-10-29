@@ -1,0 +1,28 @@
+<app-dashboard *ngIf="isLoggedIn "></app-dashboard>
+<app-employee *ngIf="isLoggedIn && userRole=='emp'"></app-employee>
+<app-admin *ngIf="isLoggedIn && userRole=='admin'"></app-admin>
+
+<form *ngIf="!isLoggedIn">
+        <div class="imgcontainer">
+          <img src="../../assets/images.jpg" alt="Avatar" class="avatar">
+        </div>
+      
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="username" required [(ngModel)]="userName">
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" required  [(ngModel)]="password">
+      
+          <button class="btn btn-default" type="submit" (click)="login()">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+</form>
+<!-- <app-dashboard ></app-dashboard>
+<app-employee ></app-employee>
+<app-admin ></app-admin> -->
+
+
+

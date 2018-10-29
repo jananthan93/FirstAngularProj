@@ -1,0 +1,110 @@
+<div class="panel panel-default">
+  <button type="button" class="btn btn-info btn-default pull-right" data-toggle="modal" data-target="#leavemodal" (click)="clear()">Add
+    LeaveType</button>
+        <div class="panel-heading main-color-bg">
+          <h3 class="panel-title">LeaveType Details</h3>
+        </div>
+                <!-- Modal for add LeaveType-->
+            <div class="modal fade" id="leavemodal" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">LeaveType</h4>
+                  </div>
+                  <div class="modal-body">
+                    <!-- <div class="form-group">
+                      <label>LeaveType Id:</label>
+                      <input type="text" class="form-control" placeholder="LeaveType Id" name="aa" [(ngModel)]="leavetypeObj.id">
+                    </div> -->
+                    <div class="form-group">
+                      <label>LeaveType :</label>
+                      <input type="text" class="form-control" placeholder="LeaveType" name="bb" [(ngModel)]="leavetypeObj.leaveType">
+                    </div>
+                    <div class="form-group">
+                      <label>Allocation :</label>
+                      <input type="text" class="form-control" placeholder="Allocation" name="cc" [(ngModel)]="leavetypeObj.allocationDays">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" (click)="createLeave()">Add</button>
+                    <!-- <button type="button" class="btn btn-active" data-dismiss="modal">Update</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>LeaveType Id</th>
+                      <th>LeaveType</th>
+                      <th>Allocation Days</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let leave of leavetypes">
+                      <td>{{leave.id}}</td>
+                      <td>{{leave.leaveType}}</td>
+                      <td>{{leave.allocationDays}}</td>
+  
+                      <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#leaveedit" (click)=" getUpdateById(leave)">Edit</button>
+                      <button type="button" class="btn btn-danger " data-toggle="modal" data-target="#leavedelete" (click)=" getDeleteById(leave)">Delete</button>
+                    </tr>
+                      <!-- Modal for edit LeaveType-->
+                      <div class="modal fade" id="leaveedit" role="dialog">
+                        <div class="modal-dialog">
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Update LeaveType</h4>
+                            </div>
+                            <div class="modal-body">
+                              <div class="form-group">
+                                <label>LeaveType Id:</label>
+                                <input type="text" class="form-control" placeholder="LeaveType Id" name="a" [(ngModel)]="leavetypeObj.id">
+                              </div>
+                              <div class="form-group">
+                                <label>LeaveType :</label>
+                                <input type="text" class="form-control" placeholder="LeaveType" name="b" [(ngModel)]="leavetypeObj.leaveType">
+                              </div>
+                              <div class="form-group">
+                                <label>Allocation :</label>
+                                <input type="text" class="form-control" placeholder="Allocation" name="c" [(ngModel)]="leavetypeObj.allocationDays">
+                              </div>
+  
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal" (click)="updateLeaveType(leave)">Update</button>
+  
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Modal for Delete LeaveType-->
+                      <div class="modal fade" id="leavedelete" role="dialog">
+                        <div class="modal-dialog">
+  
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Are You Delete Department?</h4>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal" (click)=" deleteLeaveType()">Yes</button>
+                              <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                              <!-- <button type="button" class="btn btn-active" data-dismiss="modal">Update</button> -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+</div>
